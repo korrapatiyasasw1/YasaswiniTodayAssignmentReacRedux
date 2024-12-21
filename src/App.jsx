@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts,deleteProduct } from './redux/action';
 import ProductList from './components/ProductList';
-import ProductForm from './components/productForm';
+import ProductForm from './components/ProductForm';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,6 @@ const App = () => {
       <h1>Product Management</h1>
       <ProductForm
         onSubmit={(formData) => {
-          // Decide whether to add or update based on formData (add new or update existing)
           dispatch(addProduct(formData));
         }}
       />
